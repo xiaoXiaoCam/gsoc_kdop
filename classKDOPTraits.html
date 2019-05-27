@@ -1,0 +1,369 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="./Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.0 - K Discrete Oriented Polytope Tree (KDOP Tree): KDOPTraits Class Reference</title>
+<!-- <link href="./Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="./Manual/jquery.js"></script>
+<script type="text/javascript" src="./Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="./Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="./Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="./Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="./Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="./Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<script src="./Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- Custom mathjax -->
+<!-- TODO: Remove this with MATHJAX_CODEFILE -->
+<span style="display:none">\( \newcommand{\E}{\mathrm{E}} \) \( \newcommand{\A}{\mathrm{A}} \)
+\( \newcommand{\R}{\mathrm{R}} \) \( \newcommand{\N}{\mathrm{N}} \) \( \newcommand{\Q}{\mathrm{Q}} \) \( \newcommand{\Z}{\mathrm{Z}} \)
+\(
+\def\ccSum #1#2#3{
+  \sum_{#1}^{#2}{#3}
+}
+\def\ccProd #1#2#3{
+  \sum_{#1}^{#2}{#3}
+}\)
+</span>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="./Manual/index.html">Top</a></li>
+    <li><a href="./Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="./Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="./Manual/packages.html">Package Overview</a></li>
+    <li><a href="./Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="./Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="./Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.0 - K Discrete Oriented Polytope Tree (KDOP Tree)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "./Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.11 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classKDOPTraits.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="classKDOPTraits-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">KDOPTraits Class Reference<div class="ingroups"><a class="el" href="group__PkgKDOPTree.html">K Discrete Oriented Polytope Tree (KDOP Tree) Reference</a> &raquo; <a class="el" href="group__PkgKDOPTreeConcepts.html">Concepts</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;Concepts/KDOPTraits.h&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Definition</h2>
+<div class="textblock"><p>The concept <code><a class="el" href="classKDOPTraits.html" title="The concept KDOPTraits provides the geometric primitive types and methods for the class CGAL::KDOP_tr...">KDOPTraits</a></code> provides the geometric primitive types and methods for the class <code>CGAL::KDOP_tree&lt;<a class="el" href="classKDOPTraits.html" title="The concept KDOPTraits provides the geometric primitive types and methods for the class CGAL::KDOP_tr...">KDOPTraits</a>&gt;</code>. </p>
+<div id="CGALConcept"></div><p>^^</p><dl class="hasModels"><dt><b><a class="el" href="hasModels.html#_hasModels000003">Has Models:</a></b></dt><dd><code>CGAL::KDOP_traits&lt;KDOPGeomTraits,<a class="el" href="classKDOPPrimitive.html" title="The concept KDOPPrimitive describes the requirements for the primitives stored in the KDOP tree data ...">KDOPPrimitive</a>&gt;</code></dd></dl>
+<dl class="refines"><dt><b><a class="el" href="refines.html#_refines000001">Refines:</a></b></dt><dd><code>SearchGeomTraits_3</code></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><code>CGAL::KDOP_traits&lt;KDOPGeomTraits,<a class="el" href="classKDOPPrimitive.html" title="The concept KDOPPrimitive describes the requirements for the primitives stored in the KDOP tree data ...">KDOPPrimitive</a>&gt;</code> </dd>
+<dd>
+<code>CGAL::KDOP_tree&lt;<a class="el" href="classKDOPTraits.html" title="The concept KDOPTraits provides the geometric primitive types and methods for the class CGAL::KDOP_tr...">KDOPTraits</a>&gt;</code> </dd>
+<dd>
+<code><a class="el" href="classKDOPPrimitive.html" title="The concept KDOPPrimitive describes the requirements for the primitives stored in the KDOP tree data ...">KDOPPrimitive</a></code> </dd></dl>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Types</h2></td></tr>
+<tr class="memitem:a2a49db0a09dc492ab8e44bc523efd2ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a49db0a09dc492ab8e44bc523efd2ce"></a>
+typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a2a49db0a09dc492ab8e44bc523efd2ce">FT</a></td></tr>
+<tr class="memdesc:a2a49db0a09dc492ab8e44bc523efd2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value type of the <code>Squared_distance</code> functor. <br /></td></tr>
+<tr class="separator:a2a49db0a09dc492ab8e44bc523efd2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c6ea1571ed394cdd02294837f6dd6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0c6ea1571ed394cdd02294837f6dd6b"></a>
+typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#ae0c6ea1571ed394cdd02294837f6dd6b">Point_3</a></td></tr>
+<tr class="memdesc:ae0c6ea1571ed394cdd02294837f6dd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of a 3D point. <br /></td></tr>
+<tr class="separator:ae0c6ea1571ed394cdd02294837f6dd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e356977f710162931c15481daf786c"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#ab5e356977f710162931c15481daf786c">Primitive</a></td></tr>
+<tr class="memdesc:ab5e356977f710162931c15481daf786c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of primitive.  <a href="#ab5e356977f710162931c15481daf786c">More...</a><br /></td></tr>
+<tr class="separator:ab5e356977f710162931c15481daf786c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cac81d3bdf8a2307d70536dacce6b52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cac81d3bdf8a2307d70536dacce6b52"></a>
+typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a3cac81d3bdf8a2307d70536dacce6b52">Kdop</a></td></tr>
+<tr class="memdesc:a3cac81d3bdf8a2307d70536dacce6b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">K-dop type. <br /></td></tr>
+<tr class="separator:a3cac81d3bdf8a2307d70536dacce6b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640fb9e3cd04448f1bd5531aa3b49da6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a640fb9e3cd04448f1bd5531aa3b49da6"></a>
+typedef std::pair&lt; <a class="el" href="classKDOPTraits.html#ae0c6ea1571ed394cdd02294837f6dd6b">Point_3</a>, Primitive::Id &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a640fb9e3cd04448f1bd5531aa3b49da6">Point_and_primitive_id</a></td></tr>
+<tr class="memdesc:a640fb9e3cd04448f1bd5531aa3b49da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D Point and Primitive Id type <br /></td></tr>
+<tr class="separator:a640fb9e3cd04448f1bd5531aa3b49da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Splitting</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp3577589a87a81dbb54067e164fefb78c"></a>During the construction of the KDOP tree, the primitives are splitted according to some comparison functions.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Splitting scheme based on the centroid of the collection of primitives. </dd></dl>
+</td></tr>
+<tr class="memitem:ae1961de3cbb05feb54de71bf0913bd5f"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#ae1961de3cbb05feb54de71bf0913bd5f">Split_primitives</a></td></tr>
+<tr class="memdesc:ae1961de3cbb05feb54de71bf0913bd5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A functor object to split a range of primitives.  <a href="#ae1961de3cbb05feb54de71bf0913bd5f">More...</a><br /></td></tr>
+<tr class="separator:ae1961de3cbb05feb54de71bf0913bd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Intersections</h2></td></tr>
+<tr class="memitem:a6618ceea786104d1233329e979cb376e"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a6618ceea786104d1233329e979cb376e">Compute_kdop</a></td></tr>
+<tr class="memdesc:a6618ceea786104d1233329e979cb376e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A functor object to compute the kdop (support heights) of a set of primitives.  <a href="#a6618ceea786104d1233329e979cb376e">More...</a><br /></td></tr>
+<tr class="separator:a6618ceea786104d1233329e979cb376e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98eea86771ef55f5a7ae75569899859a"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a98eea86771ef55f5a7ae75569899859a">Do_intersect</a></td></tr>
+<tr class="memdesc:a98eea86771ef55f5a7ae75569899859a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A functor object to compute intersection predicates between the query and the nodes of the tree.  <a href="#a98eea86771ef55f5a7ae75569899859a">More...</a><br /></td></tr>
+<tr class="separator:a98eea86771ef55f5a7ae75569899859a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8089908ac430b1ddf24c5ed1debb68d"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#aa8089908ac430b1ddf24c5ed1debb68d">Intersection</a></td></tr>
+<tr class="memdesc:aa8089908ac430b1ddf24c5ed1debb68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A functor object to compute the intersection of a query and a primitive.  <a href="#aa8089908ac430b1ddf24c5ed1debb68d">More...</a><br /></td></tr>
+<tr class="separator:aa8089908ac430b1ddf24c5ed1debb68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924eb0f7ac107015678ddbc274fa699f"><td class="memItemLeft" align="right" valign="top">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a924eb0f7ac107015678ddbc274fa699f">Equal_3</a></td></tr>
+<tr class="memdesc:a924eb0f7ac107015678ddbc274fa699f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A functor object to compare two points.  <a href="#a924eb0f7ac107015678ddbc274fa699f">More...</a><br /></td></tr>
+<tr class="separator:a924eb0f7ac107015678ddbc274fa699f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Operations</h2></td></tr>
+<tr class="memitem:acde0885ee8302c88a4785855f42654f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acde0885ee8302c88a4785855f42654f6"></a>
+<a class="el" href="classKDOPTraits.html#ae1961de3cbb05feb54de71bf0913bd5f">Split_primitives</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#acde0885ee8302c88a4785855f42654f6">split_primitives_object</a> ()</td></tr>
+<tr class="memdesc:acde0885ee8302c88a4785855f42654f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the primitive splitting functor. <br /></td></tr>
+<tr class="separator:acde0885ee8302c88a4785855f42654f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b79fa14701c8771af7a539a42be9d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97b79fa14701c8771af7a539a42be9d5"></a>
+<a class="el" href="classKDOPTraits.html#a6618ceea786104d1233329e979cb376e">Compute_kdop</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#a97b79fa14701c8771af7a539a42be9d5">compute_kdop_object</a> ()</td></tr>
+<tr class="memdesc:a97b79fa14701c8771af7a539a42be9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the support heights constructor. <br /></td></tr>
+<tr class="separator:a97b79fa14701c8771af7a539a42be9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa8042cc020b3cd8b16e41b7d3514d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaa8042cc020b3cd8b16e41b7d3514d9"></a>
+<a class="el" href="classKDOPTraits.html#a98eea86771ef55f5a7ae75569899859a">Do_intersect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#acaa8042cc020b3cd8b16e41b7d3514d9">do_intersect_object</a> ()</td></tr>
+<tr class="memdesc:acaa8042cc020b3cd8b16e41b7d3514d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection detection functor. <br /></td></tr>
+<tr class="separator:acaa8042cc020b3cd8b16e41b7d3514d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa690bfb662c6428d056e779a1e5eb8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa690bfb662c6428d056e779a1e5eb8"></a>
+<a class="el" href="classKDOPTraits.html#aa8089908ac430b1ddf24c5ed1debb68d">Intersection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#aafa690bfb662c6428d056e779a1e5eb8">intersection_object</a> ()</td></tr>
+<tr class="memdesc:aafa690bfb662c6428d056e779a1e5eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection constructor. <br /></td></tr>
+<tr class="separator:aafa690bfb662c6428d056e779a1e5eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca70f163c7dc1da333f385b537d5c047"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca70f163c7dc1da333f385b537d5c047"></a>
+<a class="el" href="classKDOPTraits.html#a924eb0f7ac107015678ddbc274fa699f">Equal_3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#aca70f163c7dc1da333f385b537d5c047">equal_3_object</a> ()</td></tr>
+<tr class="memdesc:aca70f163c7dc1da333f385b537d5c047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the equal functor. <br /></td></tr>
+<tr class="separator:aca70f163c7dc1da333f385b537d5c047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Primitive with Shared Data</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp8b59f2d37e0fa27d2053fc68dea32a25"></a>In addition, if <code>Primitive</code> is a model of the concept <code>KDOPPrimitiveWithSharedData</code>, the following functions are part of the concept: </p>
+</td></tr>
+<tr class="memitem:ace5229be41bb624268e4cc8185fcb7d1"><td class="memTemplParams" colspan="2">template&lt;class... T&gt; </td></tr>
+<tr class="memitem:ace5229be41bb624268e4cc8185fcb7d1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classKDOPTraits.html#ace5229be41bb624268e4cc8185fcb7d1">set_shared_data</a> (T...t)</td></tr>
+<tr class="memdesc:ace5229be41bb624268e4cc8185fcb7d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">the signature of that function must be the same as the static function <code>Primitive::construct_shared_data</code>.  <a href="#ace5229be41bb624268e4cc8185fcb7d1">More...</a><br /></td></tr>
+<tr class="separator:ace5229be41bb624268e4cc8185fcb7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a6618ceea786104d1233329e979cb376e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#a6618ceea786104d1233329e979cb376e">KDOPTraits::Compute_kdop</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A functor object to compute the kdop (support heights) of a set of primitives. </p>
+<p>Provides the operator: <code>Kdop operator()(Input_iterator begin, Input_iterator beyond);</code> Iterator type <code><a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classInputIterator.html">InputIterator</a></code> must have <code>Primitive</code> as value type. </p>
+
+</div>
+</div>
+<a class="anchor" id="a98eea86771ef55f5a7ae75569899859a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#a98eea86771ef55f5a7ae75569899859a">KDOPTraits::Do_intersect</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A functor object to compute intersection predicates between the query and the nodes of the tree. </p>
+<p>Provides the operators:</p><ul>
+<li><code>bool operator()(const Query &amp; q, const Kdop &amp; kdop);</code> which returns <code>true</code> iff the query intersects the kdop</li>
+<li><code>bool operator()(const Query &amp; q, const Primitive &amp; primitive);</code> which returns <code>true</code> iff the query intersects the primitive </li>
+</ul>
+
+</div>
+</div>
+<a class="anchor" id="a924eb0f7ac107015678ddbc274fa699f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#a924eb0f7ac107015678ddbc274fa699f">KDOPTraits::Equal_3</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A functor object to compare two points. </p>
+<p>Provides the operator: <code>bool operator()(const Point_3&amp; p, const Point_3&amp; q);}</code> which returns <code>true</code> if <code>p</code> is equal to <code>q</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa8089908ac430b1ddf24c5ed1debb68d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#aa8089908ac430b1ddf24c5ed1debb68d">KDOPTraits::Intersection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A functor object to compute the intersection of a query and a primitive. </p>
+<p>Provides the operator: <code>boost::optional&lt;Intersection_and_primitive_id&lt;Query&gt;::Type &gt; operator()(const Query &amp; q, const Primitive&amp; primitive);</code> which returns the intersection as a pair composed of an object and a primitive id, iff the query intersects the primitive. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5e356977f710162931c15481daf786c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#ab5e356977f710162931c15481daf786c">KDOPTraits::Primitive</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of primitive. </p>
+<p>Must be a model of the concepts <code><a class="el" href="classKDOPPrimitive.html" title="The concept KDOPPrimitive describes the requirements for the primitives stored in the KDOP tree data ...">KDOPPrimitive</a></code> or <code>KDOPPrimitiveWithSharedData</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae1961de3cbb05feb54de71bf0913bd5f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classunspecified__type.html">unspecified_type</a> <a class="el" href="classKDOPTraits.html#ae1961de3cbb05feb54de71bf0913bd5f">KDOPTraits::Split_primitives</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A functor object to split a range of primitives. </p>
+<p>Provides the operator: <code>void operator()(InputIterator first, InputIterator beyond);</code> Iterator type <code><a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_ta./Manual.tag:../Manual/" href="../Manual/classInputIterator.html">InputIterator</a></code> must be a model of <a class="elRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_tags/Manual.tag:../Manual/" href="../Manual/classRandomAccessIterator.html">RandomAccessIterator</a> and have <code>Primitive</code> as value type. The operator is used for determining the primitives assigned to the children nodes of a given node, assuming that the goal is to split at the centroid of the collection of primitives. The primitives assigned to this node are passed as argument to the operator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ace5229be41bb624268e4cc8185fcb7d1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class... T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void KDOPTraits::set_shared_data </td>
+          <td>(</td>
+          <td class="paramtype">T...&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the signature of that function must be the same as the static function <code>Primitive::construct_shared_data</code>. </p>
+<p>The type <code>Primitive</code> expects that the data constructed by a call to <code>Primitive::construct_shared_data(t...)</code> is the one given back when accessing the reference point and the datum of a primitive. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classKDOPTraits.html">KDOPTraits</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

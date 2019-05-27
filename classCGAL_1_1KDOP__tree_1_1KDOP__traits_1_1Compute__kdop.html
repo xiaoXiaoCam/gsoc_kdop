@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CGAL 5.0 - K Discrete Oriented Polytope Tree (KDOP Tree): User Manual</title>
+<title>CGAL 5.0 - K Discrete Oriented Polytope Tree (KDOP Tree): CGAL::KDOP_tree::KDOP_traits&lt; GeomTraits, KDOPPrimitive, KDOPMap &gt;::Compute_kdop Class Reference</title>
 <!-- <link href=./Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
 <script type="text/javascript" src=./Manual/jquery.js"></script>
 <script type="text/javascript" src=./Manual/dynsections.js"></script>
@@ -133,34 +133,29 @@ var searchBox = new SearchBox("searchBox", ./Manual/search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('index.html','');});
+$(document).ready(function(){initNavTree('classCGAL_1_1KDOP__tree_1_1KDOP__traits_1_1Compute__kdop.html','');});
 </script>
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">User Manual </div>  </div>
+<div class="title">CGAL::KDOP_tree::KDOP_traits&lt; GeomTraits, KDOPPrimitive, KDOPMap &gt;::Compute_kdop Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="Chapter_KDOPTree"></a> </p> <div id="autotoc" class="toc"></div>  <dl class="section author"><dt>Author</dt><dd>Xiao Xiao, Fehmi Cirak, Andreas Fabri</dd></dl>
-<p>This chapter describes a bounding volume hierarchy data structure based on k discrete oriented polytopes.</p>
-<h1><a class="anchor" id="sec_kdop_definitions"></a>
-Definitions</h1>
-<p>Section on definitions here ...</p>
-<h1><a class="anchor" id="sec_kdop_examples"></a>
-Examples</h1>
-<h2><a class="anchor" id="subsec_kdop_FirstExample"></a>
-First Example</h2>
-<p>The following example shows ...</p>
-<p><br />
-<b>File</b> <a class="el" href="KDOP_tree_2kdop_cube_8cpp-example.html">KDOP_tree/kdop_cube.cpp</a> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;CGAL/Exact_predicates_inexact_constructions_kernel.h&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <a class="codeRef" doxygen="/home/xx791/Documents/git/cgal-public-dev/build/doc_tags/Kernel_23.tag:../Kernel_23/" href="../Kernel_23/classCGAL_1_1Exact__predicates__inexact__constructions__kernel.html">CGAL::Exact_predicates_inexact_constructions_kernel</a> K;</div><div class="line"></div><div class="line"><span class="keywordtype">int</span> main()</div><div class="line">{</div><div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;Hello world&quot;</span> &lt;&lt; std::endl;</div><div class="line">  <span class="keywordflow">return</span> 0;</div><div class="line">}</div></div><!-- fragment --><p><a class="anchor" id="fig__figkdop-bench"></a>^^ </p><div class="image">
-<img src="bench.svg" alt="bench.svg"/>
-<div class="caption">
-^^  latex bench.svg "" </div></div>
-<p>^^</p> <div class="cgal_figure_caption">  ^^ <a class="el" href="index.html#fig__figkdop-bench">fig__figkdop-bench</a> Left: ... </p> </div> <p> <br />
-</p>
-<h1><a class="anchor" id="sec_kdop_ímplementation"></a>
-Implementation History</h1>
-<p>This package was developed by Xiao Xiao as a project of the Google Summer of Code 2019, mentored by Fehmi Cirak and Andreas Fabri. It is inspired from a version that was developed at the University of Cambridge by Xiao Xiao. </p>
+
+<p><code>#include &lt;CGAL/KDOP_tree/KDOP_traits.h&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Definition</h2>
+<div class="textblock"><h3>template&lt;typename GeomTraits, typename KDOPPrimitive, typename KDOPMap = Default&gt;<br />
+class CGAL::KDOP_tree::KDOP_traits&lt; GeomTraits, KDOPPrimitive, KDOPMap &gt;::Compute_kdop</h3>
+
+<p>Compute the k-dop of a set of primitives. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>iterator on the first primitive </td></tr>
+    <tr><td class="paramname">beyond</td><td>iterator on the past-the-end primitive</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the k-dop of the primitives within the iterator range </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.13-->
@@ -170,6 +165,7 @@ move the footer to the bottom of the page. -->
 <div id="footer">
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>CGAL</b></li><li class="navelem"><b>KDOP_tree</b></li><li class="navelem"><a class="el" href="classCGAL_1_1KDOP__tree_1_1KDOP__traits.html">KDOP_traits</a></li><li class="navelem"><a class="el" href="classCGAL_1_1KDOP__tree_1_1KDOP__traits_1_1Compute__kdop.html">Compute_kdop</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
